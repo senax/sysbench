@@ -1,3 +1,78 @@
+2020-04-24  Alexey Kopytov  <akopytov@gmail.com>
+
+	* version 1.0.20
+	* build/CI/packaging: Add arm64 to Travis CI matrix (#358)
+	* build/CI/packaging: add Ubuntu Focal
+	* build/CI/packaging: remove Fedora Rawhide from CI matrix
+	* build/CI/packaging: fix regression tests to work with MySQL 8.0.19+
+	* build/CI/packaging: fix macOS builds in Travis
+	* build/CI/packaging: remove Ubuntu Disco (EOL)
+
+2019-12-08  Alexey Kopytov  <akopytov@gmail.com>
+
+	* version 1.0.19
+	* build/CI/packaging: fix Ubuntu packaging for Bionic and later versions
+	* regression tests: compatibility fix for PostgreSQL 12
+	* build/CI/packaging: fix macOs builds in Travis
+	* build/CI/packaging: add Fedora 31.
+
+2019-10-21  Alexey Kopytov  <akopytov@gmail.com>
+
+	* version 1.0.18
+	* build/CI/packaging: add Ubuntu Eoan.
+	* build/CI/packaging: remove Ubuntu Cosmic (EOL).
+	* build/CI/packaging: add CentOS 8.
+	* build/CI/packaging: add Ubuntu Disco.
+	* build/CI/packaging: remove Ubuntu Trusty (EOL).
+	* build/CI/packaging: remove Fedora 28 (EOL).
+	* build/CI/packaging: add Fedora 30.
+	* build/CI/packaging: cherry-pick fix for LuaJIT/LuaJIT#484 to
+	fix builds on macOS Mojave.
+	* build/CI/packaging: add Debian Buster
+
+2019-03-15  Alexey Kopytov  <akopytov@gmail.com>
+
+	* version 1.0.17
+	* build/CI/packaging: update RPM spec to support RHEL8-beta
+	(thanks to Alexey Bychko for the patch)
+	* regression tests: remove unnecessary error leading to opt_rate.t instability.
+	* --rate mode: return a non-zero exit code on event queue
+	overflow.
+	* --rate mode: fix a bogus error about eventgen thread termination
+
+2018-12-16  Alexey Kopytov  <akopytov@gmail.com>
+
+	* version 1.0.16
+	* build/CI/packaging: add Ubuntu Cosmic.
+	* build/CI/packaging: add Fedora 29.
+	* build/CI/packaging: remove Fedora 27 (EOL).
+	* SQL API: fix GH-282 (Mysql's fetch_row() is broken)
+	* --rate mode: fix latency stats skew on low rates
+	* Lua: Add /usr/share/lua/5.1 to LUA_PATH and /usr/lib/lua/5.1
+	to LUA_CPATH.
+	* build/CI/packaging: add -Wvla to default compiler flags.
+	* build/CI/packaging: fix debian/changelog format
+	* build/CI/packaging: fix buildpack.sh to not push multiple file
+	types to packagecloud.
+	* build/CI/packaging: add libaio-dev to Debian/Ubuntu build
+	dependencies.
+
+2018-07-03  Alexey Kopytov  <akopytov@gmail.com>
+
+	* version 1.0.15
+	* CI/build/packaging: add Fedora 28
+	* CI/build/packaging: add Ubuntu Bionic
+	* CI/build/packaging: remove Fedora 26 (EOL)
+	* CI/build/packaging: remove Debian Wheezy (EOL)
+	* fileio: fix GH-229 (--file-fsync-freq=0 seems to prevent
+	fsync() at the end of the test)
+	* command line: improve parsing of boolean command line options
+	* tests: fix GH-220 (Testsuite api_sql_mysql.t failed ...)
+	* tests: fix GH-223 (test failure on ppc64)
+	* tests: fix opt_help.t to pass when the binary is not
+	configured with MySQL support
+	* MySQL driver: use it by default in DB benchmarks
+
 2018-04-01  Alexey Kopytov  <akopytov@gmail.com>
 
 	* version 1.0.14
